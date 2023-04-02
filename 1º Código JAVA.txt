@@ -1,0 +1,72 @@
+package conversorF;
+
+import java.util.Scanner;
+
+public class Main {
+
+    
+    public static void main(String[] args) {
+    int opcao = 10;    
+    int opcao1;
+    int opcao0;
+    
+    Scanner leitorScanner = new Scanner(System.in);
+    
+  while(opcao > 0){  
+    System.out.println("1-Converter Temperatura");
+    System.out.println("2-Converter Dinheiro");
+    System.out.println("3-Sair");
+        opcao0 = leitorScanner.nextInt();
+    
+    switch(opcao0){
+        case 1: {
+            System.out.println("1-Celsius para Fahrenheit");
+            System.out.println("2-Fahrenheit para Celsius");
+            opcao1 = leitorScanner.nextInt();
+            if(opcao1 == 1){
+             System.out.println("Escreva a Temperatura de Celsius");
+                  double cel = leitorScanner.nextDouble();
+                  double converC = (cel* 1.8) + 32;
+                  System.out.println("°" + cel + " Celsius equivale a °"+ converC +" Fahrenheit");
+                  
+            }else{
+             System.out.println("Escreva a Temperatura de Fahrenheit");
+                  double fah = leitorScanner.nextDouble();
+                  double converF = (fah - 32) /1.8;
+                  System.out.println("°" + fah + " Fahrenheit equivale a °"+ converF +" Celsius");
+            }
+            break;
+        }
+        case 2 :{
+            System.out.println("1-Real para Dolar");
+            System.out.println("2-Dolar para Real");
+            opcao1 = leitorScanner.nextInt();
+            if(opcao1 == 1){
+                
+            System.out.println("Digite o valor do Dolar");
+            double dollr = leitorScanner.nextDouble();
+            
+            System.out.println("Digite o valor em Real");
+            double dinheiro = leitorScanner.nextDouble();
+            double converD = (dinheiro / dollr);
+            System.out.println(dinheiro + " equivale a " + converD +" Dolares");
+            
+            }else{
+                System.out.println("Digite o valor do Dolar");
+                double dollr = leitorScanner.nextDouble();
+                
+                System.out.println("Digite o valor em Dolar");
+                double dinheiro = leitorScanner.nextDouble();
+                double converD = (dollr * dinheiro);
+                System.out.println(dinheiro + " equivale a "+ converD +" reais");
+            }
+        }break;
+            default :{
+            System.out.println("Comando inválido");
+            break;
+        }
+        }                                
+        }
+    opcao = opcao - 1;
+    } 
+  }
