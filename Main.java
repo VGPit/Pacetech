@@ -1,26 +1,20 @@
-package projetoPacetech;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package projetoCalculadora;
 
-import java.util.Scanner;
-
+/**
+ *
+ * @author victo
+ */
 public class Main {
 
-   
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
-        Scanner leitor = new Scanner(System.in);
-        
-        Empregados Carlos = new Empregados("Carlos", "Alberto", 3800f);
-         System.out.println("Salário Anual de Carlos = " + Carlos.getSalarioAnual());
-         
-         
-        Empregados Roberto = new Empregados("Roberto", "Algusto", 700f);
-        System.out.println("Salário Anual de Roberto = "+ Roberto.getSalarioAnual());
-        
-        System.out.println("Funcionário " + Carlos.getPrimeiroNome()
-                + Carlos.getSobrenome() +" e "+ Roberto.getPrimeiroNome()
-                + Roberto.getSobrenome() + " receberam um aumento de 10%");
-        
-        System.out.println("O Salário Anual de Carlos foi para R$ " + Carlos.getSalarioAumento());
-        System.out.println("O Salário Anual de Carlos foi para R$ " + Roberto.getSalarioAumento());
+        // TODO code application logic here
     }
     
 }
